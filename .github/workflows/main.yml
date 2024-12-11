@@ -44,8 +44,8 @@ jobs:
 
   
   package-and-publish:
-    # needs:
-    #   - build
+    needs:
+      - build
 
     name: 🐳 Package & Publish
     runs-on: ubuntu-latest
@@ -105,7 +105,7 @@ jobs:
           sudo docker rm my-container || true
           
           # Run the new container
-          sudo docker run -d --name my-container -p 80:5000 ${{ secrets.DOCKER_USERNAME }}/cloud-gh-actions-workshop:latest
+          sudo docker run -d --name my-container -p 80:8080 ${{ secrets.DOCKER_USERNAME }}/cloud-gh-actions-workshop:latest
   
           # Clean up unused Docker resources
           sudo docker system prune -f

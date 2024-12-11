@@ -1,5 +1,4 @@
-name: Nurda Zangar ci/cd
-
+name: chetam brat
 on:
   push:
     branches: [ "main" ]  # Trigger on push to 'main' branch
@@ -20,7 +19,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pylint bandit mypy
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     # name: "Build and Test"
     # runs-on: ubuntu-latest

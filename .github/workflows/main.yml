@@ -105,7 +105,7 @@ jobs:
           sudo docker rm my-container || true
           
           # Run the new container
-          sudo docker run -d --name my-container -p 80:8080 ${{ secrets.DOCKER_USERNAME }}/zangar-chetamski-chetam:latest
+          sudo docker run -d --name my-container -p 80:5000 ${{ secrets.DOCKER_USERNAME }}/zangar-chetamski-chetam:latest
   
           # Clean up unused Docker resources
           sudo docker system prune -f
